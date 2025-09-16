@@ -5,7 +5,7 @@ from . import usermanager
 class CustomUser(AbstractUser):
     username = None
     phone_number = models.CharField(max_length = 14, unique = True)
-    address = models.TextField()
+    address = models.TextField(blank=True, null=True)
 
     USERNAME_FIELD = 'phone_number'
     REQUIRED_FIELDS = []
