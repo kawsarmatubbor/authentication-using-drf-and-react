@@ -32,7 +32,7 @@ function Login() {
             <div className="login-container-wrapper">
                 <div className="login-container">
                     <h1 className="container-title">Welcome Back:)</h1>
-                    <form className="login-form" onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit}>
                         <div className="phone_number">
                             <label htmlFor="phone_number">Phone Number</label>
                             <input

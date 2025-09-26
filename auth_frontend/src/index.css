@@ -91,12 +91,14 @@ body {
     text-align: center;
 }
 
-/* Login-style */
+/* Registration-style */
+.registration-container-wrapper,
 .login-container-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.registration-container-wrapper .registration-container,
 .login-container-wrapper .login-container {
     padding: 20px;
     width: 400px;
@@ -105,21 +107,25 @@ body {
     gap: 10px;
     background: var(--gray-color-lgt);
 }
-.login-form {
+form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.login-form label {
+label {
     display: block;
     margin-bottom: 5px;
     font-weight: 600;
     color: var(--dark-color);
 }
-.login-form input {
+input,
+textarea {
+    all: unset;
+    box-sizing: border-box;
     width: 100%;
+    font-size: 16px;
+    background: var(--light-color);
     padding: 10px 20px;
     border: 1px solid var(--gray-color-drk);
     outline: none;
-    font-size: 16px;
 }
