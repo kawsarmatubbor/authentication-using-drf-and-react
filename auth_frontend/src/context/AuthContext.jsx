@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const [access, setAccess] = useState(null);
+    const [access, setAccess] = useState(localStorage.getItem("access"));
 
     const navigation = useNavigate();
 
@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
         localStorage.setItem("access", access);
         localStorage.setItem("refresh", refresh);
         setAccess(access);
-        navigation("/dashboard");
+        navigation("/profile");
     };
 
     const logout = () => {

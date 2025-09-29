@@ -22,8 +22,8 @@ function Header() {
             </ul>
             {access ? (
                 <div className="button-wrapper">
-                    <Link to="/dashboard" className="button">
-                        Dashboard
+                    <Link to="/profile" className="button">
+                        Profile
                     </Link>
                     <button onClick={logout} className="button secondary">
                         Logout
